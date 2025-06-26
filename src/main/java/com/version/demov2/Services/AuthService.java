@@ -12,7 +12,7 @@ public class AuthService {
 	@Autowired
 	private UserService userService;
 
-	public void validateSerlfOrAdmin(Long userId) {
+	public void validateSelfOrAdmin(Long userId) {
 		User me = userService.authenticated();
 		if (me.hasRole("ROLE_ADMIN")) {
 			return;
